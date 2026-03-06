@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Page</title>
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      background: #f5f5f5;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+    #chatBtn {
+    position: fixed;
+    bottom: 275px;
+    right: 230px;
+    padding: 12px 90px;
+    border-radius: 24px;
+    background: #ff9900;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    z-index: 1000;
+    opacity: 0;
+  }
+  </style>
+</head>
+<body>
+  <button id="chatBtn" onclick="openDealBot()">Negotiate Price</button>
+  <img src="img.png" alt="Website Screenshot">
+  <script src="dealbot-widget.js"></script>
+
+  <style>
+    #dealbot-chat-button {
+        display: none !important;
+    }
+</style>
+</body>
+</html>

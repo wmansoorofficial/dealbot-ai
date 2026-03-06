@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Page</title>
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      background: #f5f5f5;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+    #chatBtn {
+    position: absolute;
+    bottom: 275px;
+    right: 230px;
+    padding: 12px 90px;
+    border-radius: 24px;
+    background: #ff9900;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    z-index: 1000;
+    opacity: 0;
+    color: white;
+    font-weight: bold;
+  }
+  </style>
+</head>
+<body>
+  <button id="chatBtn" onclick="openChatWidget()">Negotiate Price</button>
+  <img src="img.png" alt="Website Screenshot">
+  
+  <!-- Configurable Chat Widget -->
+  <script src="chatbot-widget-configurable.js"></script>
+  <script>
+    console.log('Initializing chat widget...');
+    
+    // Initialize the configurable widget with custom API
+    initChatWidget({
+      apiUrl: 'http://localhost:8000',
+      sessionEndpoint: '/apps/priceneg/users/root/sessions',
+      runEndpoint: '/run',
+      appName: 'priceneg',
+      userId: 'root',
+      apiType: 'custom', // Use custom API format
+      title: 'DealBot AI',
+      icon: '🤝',
+      primaryColor: '#FF9900',
+      secondaryColor: '#232F3E',
+      width: '900px',
+      height: '800px',
+      placeholder: 'Ask about deals...',
+      initialMessage: 'I want to negotiate the price for this product: Fire HD 10 Tablet 10.1" vibrant Full HD screen, octa-core processor, 3 GB RAM Current Price: $139.99',
+      sendInitialMessage: true,
+      showInitialMessageInChat: false,
+      storageKey: 'dealbot-session-id'
+    });
+    
+    console.log('Chat widget initialized');
+    console.log('openChatWidget function available:', typeof window.openChatWidget);
+  </script>
+
+  <style>
+    /* Hide the default floating button */
+    #chat-widget-button {
+        display: none !important;
+    }
+</style>
+</body>
+</html>
