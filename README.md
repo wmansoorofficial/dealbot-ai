@@ -1,6 +1,14 @@
 # DealBot AI - Amazon Price Negotiation Assistant
 
 An intelligent chatbot powered by AWS Bedrock (Claude 3.5 Sonnet) that helps customers negotiate better prices on Amazon products through natural conversation.
+# AWS Builder Article
+This idea got pushed in to the semi-final round of AWS 10000 AIdeas Competition , here is the link 
+https://builder.aws.com/post/3ADT1vPWGre4rjoEWvOGOsHASMP_p/aideas-dealbotai-a-smart-ecommerce-price-negotiator-agent
+
+# Youtube Demo Link 
+https://www.youtube.com/watch?v=BWvEybR5t9s
+
+<img width="1280" height="720" alt="DealBotAI A smart Ecommerce Price Negotiator Agent (1)" src="https://github.com/user-attachments/assets/f94d392b-9ac0-44b1-b724-b65dce30302e" />
 
 ## 🌟 Features
 
